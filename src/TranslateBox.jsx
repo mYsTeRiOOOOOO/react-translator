@@ -9,6 +9,15 @@ export default function TranslatePage(){
         txtChange : "hello"
     });
 
+    let [originalTxt , setOriginalTxt] = useState({
+        text:"Your Text here"
+    });
+
+    let orgnlText = (newinf)=>{
+        setOriginalTxt(newinf);
+        console.log("here the old text ",newinf);
+    }
+
 
     // detected language receiving 
 
@@ -44,8 +53,8 @@ export default function TranslatePage(){
 
     return(
         <div>
-            <TxtChange update={updateInfo} langDt={detLang} findLang={toLangg} />
-            <TransLateInfo info={transalted} langdt={detected} langto={tolang} />
+            <TxtChange update={updateInfo} langDt={detLang} findLang={toLangg} oldtext={orgnlText} />
+            <TransLateInfo info={transalted} langdt={detected} langto={tolang} text={originalTxt} />
         </div>
     )
 }

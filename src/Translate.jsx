@@ -5,7 +5,7 @@ import BasicSelect from './languageSelect';
 
 // update is a param passed from TranslateBox to get data from this file 
 
-export default function TxtChange({update , langDt , findLang}){
+export default function TxtChange({update , langDt , findLang , oldtext}){
 
      let [text , setText] = useState("");
      const [language, setLanguage] = useState(""); // language detection
@@ -62,7 +62,7 @@ export default function TxtChange({update , langDt , findLang}){
         }
     
         let result = await response.json();
-        console.log(result);
+        console.log("check results ",result);
     
         let ResultRes = {
           txtChange : result.data.translations[0].translatedText,
@@ -119,6 +119,9 @@ export default function TxtChange({update , langDt , findLang}){
 
       const handleData = (event) => {
         setText(event.target.value);
+        let olddata = {text : event.target.value}
+        console.log("here is the old data",olddata);
+        oldtext(olddata);
       };
 
 

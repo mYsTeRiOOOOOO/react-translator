@@ -1,0 +1,103 @@
+
+.card1{
+    /* background-image:url("./backgrnd.jpg"); */
+    background-color: azure;
+    background-size: 300px 350px;
+    width: 300px;
+    height: 350px;
+    border-radius: 20px;
+    /* margin-right: 150px; */
+}
+
+.viewcards{
+     padding: 50px;
+     justify-content: space-around;
+    background-size: 100% 100%;
+    background-color: rgb(213, 213, 213);
+    border-radius: 20px;
+    box-shadow: 0 18px 12px rgba(0, 0, 0, 0.1);
+    }
+
+.card2{
+    /* background-image:url("./backgrnd.jpg"); */
+    background-size: 300px 350px;
+    /* background-color: rgb(126, 178, 177); */
+    /* opacity: 50%; */
+    background-color: azure;
+    width: 300px;
+    height: 350px;
+    border-radius: 20px;
+}
+
+.card3{
+    width: 300px;
+    height: 350px;
+    /* background-image:url("./backgrnd.jpg"); */
+    background-size: 300px 350px;
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+    border-radius: 20px;
+}
+
+.textEnt{
+    background-color: rgb(241, 239, 239);
+    border: 1px solid grey;
+    z-index: 1;
+    height: 120px;
+    width: 80%;
+    opacity: 60%;
+    border-radius: 20px;
+    margin-top: 60px;
+    padding-bottom: 20px;
+}
+
+
+
+#hr{
+    width: 80%;
+   position: relative;
+   top: -12px;
+   right: -25px;
+}
+
+#IconVert{
+    position: relative;
+    bottom: -14px;
+    right: 90px;
+}
+
+.newText{
+    text-align: left;
+    margin-left: 40px;
+    margin-top: 12px;
+}
+
+.oldText{
+  padding: 0px;
+  position: relative;
+  margin-left: 40px;
+  top: 15px;
+  text-align: left;
+}
+
+.cardstart{
+    margin-top: 80px;
+    text-align: center;
+color: rgb(0, 0, 0);
+}
+
+.cardstart p{
+    margin: 0px;
+}
+
+#To{
+    margin-top: 15px;
+    font-size: 21px;
+}
+
+#from{
+    margin-top: 15px;
+}
+  

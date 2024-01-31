@@ -1,31 +1,45 @@
 import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
+import "./viewbox.css";
 
-export default function TransLateBox({ info , langdt , langto}) {
+import SwapVerticalCircleIcon from '@mui/icons-material/SwapVerticalCircle';
+
+export default function TransLateBox({ info , langdt , langto, text}) {
   if (!info || !info.txtChange) {
     // Handle the case where info or info.txtChange is undefined
     return null; // or render a placeholder or loading state
   }
 
- 
   return (
-    <Card sx={{ minWidth: 275 }}>
-      <CardContent>
-        <Typography variant="h5" component="div">
-          Translation Tool
-        </Typography>
-        <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          Translation Made Easy
-        </Typography>
-        <Typography variant="body2">
-          <p>{info.txtChange}</p>
-          <p>{langdt.fromLang}    =----=  {langto.toLang}</p>
-          <p></p>
-          <br />
-        </Typography>
-      </CardContent>
-    </Card>
+    <div className='viewcards' style={{display:"flex" }}>
+
+      <div className='card1'>
+        <div className='cardstart'>
+          <h3>What's on your mind</h3>
+          <p>With automatic language detection,<br /> you can effortlessly translate text <br /> into your preferred language. Just <br /> enter your text, and our tool <br /> will intelligently identify your <br /> language and seamlessly <br /> translate it into the  language <br /> of your choice. </p>
+        </div>
+        <div className='cardend'></div>
+      </div>
+
+      <div className='card2'>
+        <div className='cardstart'>
+        <h2><b>Translation</b></h2>
+        <p id='from' >Detected Lang</p>
+        <span id='To' className='spanLang'><u><b>{langdt.fromLang}</b></u></span>
+       <br /> <br /><p><SwapVerticalCircleIcon/></p>
+        <p  id='from'>To</p>
+        <span id='To' className='spanLang'><u><b>{info.isSubmitted ? `${langto.toLang}` : langto.toLang || JSON.stringify(langto)}</b></u></span> 
+        </div>
+        </div>
+
+        <div className='card3'>
+          <div className='textEnt'>
+            <div className='oldText'>
+              <p>{text.text}</p>
+            </div>
+            <div> <span id='IconVert'><SwapVerticalCircleIcon/></span><hr id='hr'/></div>
+            <div className='newText'>{info.txtChange}</div>
+          </div>
+        </div>
+</div>
   );
 }
