@@ -2,6 +2,8 @@ import TextField from '@mui/material/TextField';
 import { useState } from 'react';
 import axios from 'axios';
 import BasicSelect from './languageSelect';
+import fullLogo from './Logo.png';
+import "./navbar.css";
 
 // update is a param passed from TranslateBox to get data from this file 
 
@@ -21,6 +23,12 @@ export default function TxtChange({update , langDt , findLang , oldtext}){
   
   let btnS = {
     marginTop:"15px",
+    backgroundColor:"none",
+    height:"40px",
+    borderRadius:"20px",
+    width:"100px",
+    fontSize:"18px",
+    border:"1px solid grey",
     marginBottom:"15px"
   }
 
@@ -165,6 +173,9 @@ export default function TxtChange({update , langDt , findLang , oldtext}){
     return (
         <div>
       <form onSubmit={handleSubmit}>
+      <div className='Tlogo'>
+      <img className='lOGOimg' src={fullLogo} alt="hahaa" />
+    </div>
         <div className='txtfield' style={field}>
         <label htmlFor="tData" style={abc} >Enter Text here</label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
