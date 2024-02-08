@@ -13,29 +13,7 @@ export default function TxtChange({update , langDt , findLang , oldtext,Selected
      const [language, setLanguage] = useState(""); // language detection
      const [newTxt , setNewTxt] = useState("");   // change to which language 
      
-////////////----- Styles -----////////////////////
 
-
-     let field = {
-      display:"flex",
-    justifyContent:"center",
-  };
-  
-  let btnS = {
-    marginTop:"15px",
-    backgroundColor:"none",
-    height:"40px",
-    borderRadius:"20px",
-    width:"100px",
-    fontSize:"18px",
-    border:"1px solid grey",
-    marginBottom:"15px"
-  }
-
-     let abc = {color:"black" , 
-     paddingTop:"15px",
-
-    };
 
     ////////////---API REQUESTS---////////////
 
@@ -184,8 +162,8 @@ export default function TxtChange({update , langDt , findLang , oldtext,Selected
       <div className='Tlogo'>
       <img className='lOGOimg' src={fullLogo} alt="hahaa" />
     </div>
-        <div className='txtfield' style={field}>
-        <label htmlFor="tData" style={abc} >Enter Text here</label>
+        <div className='txtfield'>
+        <label htmlFor="tData" className='Label' >Enter Text here</label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <TextField
           id="tData"
@@ -200,7 +178,7 @@ export default function TxtChange({update , langDt , findLang , oldtext,Selected
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
         <BasicSelect langData={newTxtLang} LanglabelName = {langName}/>
-        <button type="submit" style={btnS}>Submit</button>
+        <button type="submit" className='SubmitBtn'>Submit</button>
       </form>
     </div>
 

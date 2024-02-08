@@ -11,3 +11,29 @@
     margin: 0px;
     margin-top: -40px;
 }
+
+.SubmitBtn:hover{
+    cursor: pointer;
+    background-color: rgb(239, 222, 202);
+}
+
+.SubmitBtn{
+    margin-top: 15px;
+    background-color: none; /* Note: none isn't a valid color value in CSS. You might want to change this */
+    height: 40px;
+    border-radius: 20px;
+    width: 100px;
+    font-size: 18px;
+    border: 1px solid grey;
+    margin-bottom: 15px;
+  }
+
+  .txtfield{
+    display:flex;
+    justify-content:center;
+  }
+
+  .Label{
+     color:black;
+     padding-top:15px;
+  }
