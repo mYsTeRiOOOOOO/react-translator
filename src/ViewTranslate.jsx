@@ -3,7 +3,7 @@ import "./viewbox.css";
 
 import SwapVerticalCircleIcon from '@mui/icons-material/SwapVerticalCircle';
 
-export default function TransLateBox({ info , langdt , langto, text}) {
+export default function TransLateBox({ info , langdt , langto, text , langLabel}) {
   if (!info || !info.txtChange) {
     // Handle the case where info or info.txtChange is undefined
     return null; // or render a placeholder or loading state
@@ -160,7 +160,7 @@ function getLanguageNameByCode(code) {
         <span id='To' className='spanLang'><u><b>"{detectedLangName}"</b></u></span>
        <br /> <br /><p><SwapVerticalCircleIcon/></p>
         <p  id='from'>To</p>
-        <span id='To' className='spanLang'><u><b>{info.isSubmitted ? `${langto.toLang}` : langto.toLang || JSON.stringify(langto)}</b></u></span> 
+        <span id='To' className='spanLang'><u><b>{langLabel}{info.isSubmitted ? `${langto.toLang}` : langto.toLang || JSON.stringify(langto)}</b></u></span> 
         </div>
         </div>
 

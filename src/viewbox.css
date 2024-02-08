@@ -100,4 +100,93 @@ color: rgb(0, 0, 0);
 #from{
     margin-top: 15px;
 }
+
+/* responsiveness of page */
+
+@media (max-width : 1100px) {
+    .card1,.card2,.card3{
+        height: 200px;
+        width: 150px;
+        font-size: 10px;
+    }
+
+    .cardstart{
+        margin-top: 0px;
+    }
+
+    .textEnt{
+        margin-top: 25px;
+    }
+
+    #hr{
+        right: -18px;
+        width: 70%;
+    }
+
+    #IconVert{
+        right: 40px;
+        bottom: -8px;
+    }
+
+    .newText{
+        margin-left: 35px;
+        font-size: 15px;
+        margin-top: 5px;
+    }
+
+    .oldText{
+        margin-left : 35px ;
+        font-size: 13px;
+    }
+
+    
+}
+
+
+/* Responsiveness for other size  */
+
+@media (max-width : 650px) {
+
+    .viewcards{
+        flex-wrap: wrap;
+    }
+    .card1,.card2,.card3{
+        height: 200px;
+        width: 150px;
+        font-size: 10px;
+        margin-top: 15px;
+    }
+
+
+    .cardstart{
+        margin-top: 0px;
+    }
+
+    .textEnt{
+        margin-top: 25px;
+    }
+
+    #hr{
+        right: -18px;
+        width: 70%;
+    }
+
+    #IconVert{
+        right: 40px;
+        bottom: -8px;
+    }
+
+    .newText{
+        margin-left: 35px;
+        font-size: 15px;
+        margin-top: 5px;
+    }
+
+    .oldText{
+        margin-left : 35px ;
+        font-size: 13px;
+    }
+
+    
+}
   

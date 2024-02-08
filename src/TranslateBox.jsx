@@ -13,6 +13,8 @@ export default function TranslatePage(){
         text:"Your Text here"
     });
 
+    let [selectName , setSelectName] = useState("");
+
     let orgnlText = (newinf)=>{
         setOriginalTxt(newinf);
         console.log("here the old text ",newinf);
@@ -51,10 +53,17 @@ export default function TranslatePage(){
     //     setLanguage(newLang);
     // }
 
+    // getting langName 
+
+    let nameLang = (newinf)=>{
+        setSelectName(newinf);
+        console.log("almost done", selectName);
+    }
+
     return(
         <div>
-            <TxtChange update={updateInfo} langDt={detLang} findLang={toLangg} oldtext={orgnlText} />
-            <TransLateInfo info={transalted} langdt={detected} langto={tolang} text={originalTxt} />
+            <TxtChange update={updateInfo} langDt={detLang} findLang={toLangg} oldtext={orgnlText} SelectedLang = {nameLang} />
+            <TransLateInfo info={transalted} langdt={detected} langto={tolang} text={originalTxt}  langLabel = {selectName}/>
         </div>
     )
 }

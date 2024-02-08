@@ -124,17 +124,32 @@ const languageOptions = [
   ];
 
 
-export default function BasicSelect({langData}) {
+export default function BasicSelect({langData , LanglabelName}) {
   const [language, setLanguage] = React.useState('');
+  let [labelName , setLabelName ] = React.useState("French");
 
   const handleChange = (event) => {
     setLanguage(event.target.value);
+    setLabelName(event.target.value);
 
     let newLang = event.target.value; // for tranferring data from this file to another file    
     langData(newLang);  // langData is a func defined in the other file where u want to transferr data 
+
+//// language label finding 
+
+function getLanguageLabelByCode(code) {
+  const language = languageOptions.find(option => option.value === code);
+  return language ? language.label : 'Unknown Language';
+}
+
+// Example usage:
+const codeToFind = labelName;  // lang name selected by user 
+const label =  getLanguageLabelByCode(codeToFind);
+
+LanglabelName(label);
+
   };
 
- 
 
   return (
     <Box sx={{ minWidth: 120 }}>

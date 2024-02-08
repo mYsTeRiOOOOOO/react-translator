@@ -7,7 +7,7 @@ import "./navbar.css";
 
 // update is a param passed from TranslateBox to get data from this file 
 
-export default function TxtChange({update , langDt , findLang , oldtext}){
+export default function TxtChange({update , langDt , findLang , oldtext,SelectedLang}){
 
      let [text , setText] = useState("");
      const [language, setLanguage] = useState(""); // language detection
@@ -165,6 +165,14 @@ export default function TxtChange({update , langDt , findLang , oldtext}){
         console.log(newInf);
         setNewTxt(newInf);
         findLang(newInf);
+      };
+
+      let [languageLabel , setLanguageLabel] = useState("")
+
+      let langName =(newinf)=>{
+        setLanguageLabel(newinf);
+        SelectedLang(newinf);
+        // console.log("half success" , newinf);
       }
 
 
@@ -191,7 +199,7 @@ export default function TxtChange({update , langDt , findLang , oldtext}){
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
-        <BasicSelect langData={newTxtLang}/>
+        <BasicSelect langData={newTxtLang} LanglabelName = {langName}/>
         <button type="submit" style={btnS}>Submit</button>
       </form>
     </div>
